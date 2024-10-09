@@ -1,0 +1,5 @@
+module.exports = {
+    APPLICATION_ID: "YjIwMDYdwjcIWxyxL9V5ozhnm4Xyj3ZqDH9KxZ3r",
+    JAVASCRIPT_KEY: "jzrscNtsTY1Oq5T4Bd3V3iaUDTixB63mgBvpGBzq",
+    SERVER_URL: "HTTPS://PARSEAPI.BACK4APP.COM/"
+}
