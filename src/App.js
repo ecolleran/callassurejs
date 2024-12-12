@@ -1,19 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Main from './Main./Main.js';
-import Main from './Main./MainList.js';
+import React from "react";
+import Components from "./Components/Components.js";
 import Parse from "parse";
 import * as ENV from "./environments.js";
 
 Parse.initialize(ENV.APPLICATION_ID, ENV.JAVASCRIPT_KEY);
-Parse.serverURL(ENV.SERVER_URL);
+Parse.serverURL = ENV.SERVER_URL;
 
 function App() {
-  return (
-    <div className="App">
-      <Main/>
-    </div>
-  );
+  return <Components />;
 }
 
 export default App;
