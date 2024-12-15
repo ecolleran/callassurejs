@@ -14,7 +14,8 @@ const Auth = () => {
   }, [navigate]);
 
   return (
-    <div>
+    <div class="center">
+      <h1>Welcome to CallAssure</h1>
       <Link to="/register">
         <button>Register</button>
       </Link>

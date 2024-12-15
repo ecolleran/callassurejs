@@ -27,7 +27,7 @@ const AuthLogin = () => {
           alert(
             `${userLoggedIn.get("firstName")}, you successfully logged in!`
           );
-          navigate("/settings");
+          navigate("/user-home");
         }
         // TODO: redirect user to main app
         setAdd(false);

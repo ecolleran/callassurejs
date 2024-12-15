@@ -33,7 +33,7 @@ const AuthRegister = () => {
       createUser(newUser).then((userCreated) => {
         if (userCreated) {
           alert(`${userCreated.get("firstName")}, you sucessfully registered!`);
-          navigate("/");
+          navigate("/user-home");
         }
         setAdd(false);
       });

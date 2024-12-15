@@ -24,25 +24,22 @@ const Components = () => {
         {/* <Route path="/home" element={<MainHome />} /> */}
         {/* <Route path="/" element={<Main />} /> */}
         {/* <Route path="/user" element={<MainGood />} /> */}
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute
-              path="/user/:firstName/:lastName"
-              element={MainGood}
-            />
-          }
+        
+        {/* Protected Routes */}
+        <Route 
+          path="/user-home" 
+          element={<ProtectedRoute element={MainGood}/>}
         />
-        <Route
-          path="/settings"
-          element={<ProtectedRoute element={Settings} />}
-        />
-        {/* <Route path="/user/:firstName/:lastName" element={<MainGood />} /> */}
-        {/* <Route path="/user" element={<ProtectedRoute element={MainGood} />} /> */}
+        <Route path="/settings" element={<ProtectedRoute element={Settings} />}/>
+
+        {/* Public Routes */}
+        <Route path="/" element={<Main />} /> {/* Public homepage */}
         <Route path="/auth" element={<Auth />} />
         <Route path="/register" element={<AuthRegister />} />
         <Route path="/login" element={<AuthLogin />} />
+        
         {/* a saftey net and catch all in case a random route is sent to*/}
+        {/* Catch-all route */}
         <Route path="*" element={<Navigate to="/auth" replace />} />
       </Routes>
     </Router>
