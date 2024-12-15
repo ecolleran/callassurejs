@@ -13,7 +13,7 @@ const MainGood = () => {
       </button>
       <br />
       <button>
-        <Link to="https://smart-goat-modern.ngrok-free.app/message-status">See Message Logs</Link>
+        <Link to="/message-logs">See Message Logs</Link>
       </button>
     </div>
   );

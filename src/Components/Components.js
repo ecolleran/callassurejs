@@ -16,6 +16,7 @@ import AuthRegister from "./Auth/AuthRegister.js";
 import AuthLogin from "./Auth/AuthLogin";
 import ProtectedRoute from "./ProtectedRoutes/ProtectedRoutes.js";
 import Settings from "./Settings/Settings.js";
+import MessageLogs from "./MessageLogs/MessageLogs.js";
 
 const Components = () => {
   return (
@@ -31,6 +32,7 @@ const Components = () => {
           element={<ProtectedRoute element={MainGood}/>}
         />
         <Route path="/settings" element={<ProtectedRoute element={Settings} />}/>
+        <Route path="/message-logs" element={<ProtectedRoute element={MessageLogs} />}/>
 
         {/* Public Routes */}
         <Route path="/" element={<Main />} /> {/* Public homepage */}
