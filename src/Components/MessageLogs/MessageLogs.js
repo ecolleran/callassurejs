@@ -17,9 +17,11 @@ const MessageLogs = () => {
               'ngrok-skip-browser-warning': '1', //bypasses the ngrok warning
             }
           });
+
         if (!response.ok) {
           throw new Error(`Error fetching logs: ${response.statusText}`);
         }
+        
         const data = await response.json();
         setLogs(data.message_logs);
       } catch (err) {
@@ -30,7 +32,7 @@ const MessageLogs = () => {
     };
 
     fetchMessageLogs();
-  }, []);
+  }, [user]);
 
   return (
     <div className="container">
