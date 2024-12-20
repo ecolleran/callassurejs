@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MessageList from "./MessageList";
+import { getAllMessageLogs } from "../../Services/MessageLogsService";
 import Parse from "parse";
 
 const MessageLogs = () => {
@@ -11,27 +12,20 @@ const MessageLogs = () => {
   useEffect(() => {
     const fetchMessageLogs = async () => {
       try {
-        const user_email = user?.get("email");
-        const response = await fetch(`https://smart-goat-modern.ngrok-free.app/get-message-logs?user_email=${user_email}`, {
-            headers: {
-              'ngrok-skip-browser-warning': '1', //bypasses the ngrok warning
-            }
-          });
-
-        if (!response.ok) {
-          throw new Error(`Error fetching logs: ${response.statusText}`);
-        }
-        
-        const data = await response.json();
-        setLogs(data.message_logs);
+        setLoading(true);
+        const messageLogs = await getAllMessageLogs();
+        setLogs(messageLogs);
       } catch (err) {
-        setError(err.message);
+        console.error("Error fetching message logs:", err);
+        setError("Failed to fetch message logs. Please try again later.");
       } finally {
         setLoading(false);
       }
     };
 
-    fetchMessageLogs();
+    if (user) {
+      fetchMessageLogs();
+    }
   }, [user]);
 
   return (
