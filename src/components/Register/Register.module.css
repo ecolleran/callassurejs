@@ -100,6 +100,15 @@ label {
   background-color: #222;
 }
 
+.submitButtonDisabled {
+  background-color: #BBCBED; /* Lighter background color */
+  cursor: auto;
+}
+
+.submitButtonDisabled:hover {
+  background-color: #BBCBED; /* Maintain the disabled look on hover */
+}
+
 .createAccountBlock {
   display: flex;
   width: 442;

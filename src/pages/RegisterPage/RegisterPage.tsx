@@ -3,7 +3,7 @@ import Register from "../../components/Register/Register"
 import LoginRegisterFooter from "../../components/LoginRegisterFooter/LoginRegisterFooter";
 import styles from './RegisterPage.module.css';
 
-function LoginPage() {
+function RegisterPage() {
   return (
     <div className={styles.registerPage}>
       <div>
@@ -15,4 +15,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default RegisterPage;

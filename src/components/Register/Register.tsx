@@ -1,12 +1,44 @@
 import styles from './Register.module.css';
 import { Link, useLocation } from 'react-router-dom'; // Import useLocation
-import { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 
-const Register: React.FC = () => {
+// interface CreateAccountProps {}
+
+const CreateAccount: React.FC = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const emailFromUrl = searchParams.get('email') || ''; // Get email from URL, or empty string if not present
   const [email, setEmail] = useState(emailFromUrl);
+  const [fullName, setFullName] = useState('');
+  const [password, setPassword] = useState('');
+  const [accountType, setAccountType] = useState('');
+
+  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const handleFullNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setFullName(event.target.value);
+  };
+
+  const handlePasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+  };
+
+  const handleAccountTypeChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setAccountType(event.target.value);
+  };
+
+  const isSubmitDisabled = !(email && fullName && password && accountType !== 'Select');
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!isSubmitDisabled) {
+      // Process the form submission here
+      console.log('Account created:', { email, fullName, password, accountType });
+        // You would typically send this data to your backend
+    }
+  };
 
   return (
     <div className={styles.signupContainer}>
@@ -25,27 +57,53 @@ const Register: React.FC = () => {
       <div className={styles.rightSection}>
         <div className={styles.formContainer}>
           <h3 className={styles.formTitle}>Create your CallAssure account</h3>
-          <form className={styles.form}>
+          <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.formGroup}>
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" className={styles.inputField} value={email} onChange={(e) => setEmail(e.target.value)}/>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                className={styles.inputField}
+              />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="fullName">Full Name</label>
-              <input type="text" id="fullName" className={styles.inputField} />
+            <label htmlFor="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              value={fullName}
+              onChange={handleFullNameChange}
+              className={styles.inputField}
+            />
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="password">Password</label>
-              <input type="password" id="password" className={styles.inputField} />
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={handlePasswordChange}
+                className={styles.inputField}
+              />
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="accountType">Account Type</label>
-              <select id="accountType" className={styles.inputField}>
-                <option value="family">Family</option>
-                <option value="lovedOne">Loved One</option>
+              <select id="accountType" value={accountType} onChange={handleAccountTypeChange} className={styles.inputField}>
+                <option value="Select">Select</option>
+                <option value="Loved One">Loved One</option>
+                <option value="Family Member">Family Member</option>
+                {/* Add other account type options as needed */}
               </select>
             </div>
-            <button type="submit" className={styles.submitButton}>Create account</button>
+            <button
+              type="submit"
+              className={`${styles.submitButton} ${isSubmitDisabled ? styles.submitButtonDisabled : ''}`}
+              disabled={isSubmitDisabled}
+            >
+              Create account
+            </button>
           </form>
           <div className={styles.createAccountBlock}>
             <div className={styles.createAccount}>
@@ -58,4 +116,4 @@ const Register: React.FC = () => {
   );
 };
 
-export default Register;
+export default CreateAccount;
