@@ -1,0 +1,61 @@
+/* HeroSection.module.css */
+
+.heroContainer{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.textContainer {
+  flex: 1; /* Take up available space */
+  max-width: 500px; /* Adjust as needed */
+  padding-right: 40px; /* Space between text and image */
+}
+
+.heroTitle {
+  font-size: 3rem; /* Adjust as needed */
+  font-weight: bold;
+  /* text-align: center; */
+  margin-bottom: 20px;
+  color: #2260CE; /* Blue title */
+  line-height: 1.2;
+}
+
+.heroText {
+  font-size: 1.2rem; /* Adjust as needed */
+  line-height: 1.6;
+  color: #333; /* Dark text */
+}
+
+.imageContainer {
+  flex: 1; /* Take up available space */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+}
+
+.heroImage {
+  max-width: 100%; /* Image scales to container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .textContainer {
+    padding-right: 0;
+    margin-bottom: 20px; /* Space between text and image */
+  }
+
+  .imageContainer {
+    order: -1; /* Place image above text on smaller screens */
+  }
+}

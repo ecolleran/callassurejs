@@ -1,0 +1,128 @@
+/* LoginPage.module.css */
+
+.loginFormContainer {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 70px;
+  background-color: white;
+  padding-top: 5px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 450px; /* Adjust width as needed */
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 0px 40px;
+  color: #222;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.passwordRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgotPassword {
+  color: #2260CE;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+
+}
+
+.forgotPassword:hover {
+  color:#222;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  margin-right: 5px;
+  color:#2260CE;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
+
+.rememberMeLabel {
+  color: #333;
+  font-size: 0.8rem;
+}
+
+.signInButton {
+  background-color: #2260CE;
+  color: white;
+  padding: 15px 20px;
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.signInButton:hover {
+  background-color: #222;
+}
+
+.createAccountBlock {
+  display: flex;
+  width: 442;
+  background-color: #f9f9f9;
+  height: 60px;
+  margin: 4px;
+  border-radius: 5px;
+}
+
+.createAccount {
+  text-align: center;
+  margin: auto auto;
+  font-size: 0.9rem;
+}
+
+.createAccount a {
+  color: #2260CE;
+  text-decoration: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 468px) {
+  .loginFormContainer {
+    width: 90%;
+    padding: 30px;
+  }
+}

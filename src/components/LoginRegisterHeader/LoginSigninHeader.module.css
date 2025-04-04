@@ -1,0 +1,14 @@
+/* Header.module.css */
+
+.header {
+  padding: 15px 0;
+  width: 100vw;
+}
+
+.logoContainer {
+  margin-left: 10vw;
+}
+
+.logo {
+  height: 75px;
+}

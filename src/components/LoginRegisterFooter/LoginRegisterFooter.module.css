@@ -1,0 +1,27 @@
+/* Footer.css */
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10vh;
+}
+
+.footerNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerLink,
+.footerCopyright {
+  font-size: 0.9em;
+  line-height: 0.9em;
+  font-weight: 500;
+  color: #666;
+  transition: color 300ms ease;
+}
+
+.footerLink:hover,
+.footerCopyright:hover {
+  color: #2260CE;
+  cursor: pointer;
+}

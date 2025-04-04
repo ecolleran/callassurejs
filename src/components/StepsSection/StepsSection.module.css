@@ -1,0 +1,139 @@
+/* StepsSection.module.css */
+
+.stepsSection {
+  margin-top: 40px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #F4F7FD;
+}
+
+.stepsContainer {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepsContainer h2 {
+  font-size: 30px;
+  color: #222222;
+}
+
+.step {
+  display: flex;
+  position: relative;
+  align-items: center;
+  /* height: 600px; */
+}
+
+.step::before {
+  /* content: ''; */
+  position: absolute;
+  top: 95px;
+  left: 30px;
+  width: 3px;
+  height: calc(92%);
+  background-color: #2260CE;
+}
+
+.step:last-child::before {
+  height: 0;
+}
+
+.stepNumber {
+  font-weight: bold;
+  font-size: 1.2rem;
+  min-width: 80px;
+  margin-right: 20px;
+  color: #2260CE;
+  position: relative;
+}
+
+.stepNumber::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 18px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 4px solid #2260CE;
+}
+.stepContent {
+  margin-right: 40px;
+  flex: 1;
+}
+
+.stepContent h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 48px;
+  line-height: 54px;
+  color: #2260CE;
+  font-weight: 500;
+}
+
+/* .stepMain {
+  display: flex;
+  align-items: center;
+} */
+
+.stepContent p {
+  font-size: 26px;
+  font-weight: 400;
+  color: #222222;
+}
+
+/* .stepImage {
+  display: flex;
+  align-items:normal;
+  width: 40vw;
+  max-width: 350px;
+  max-height: 550px;
+  height: 550px;
+  margin-bottom: 40px;
+} */
+
+img {
+  max-width: 35vw;
+  /* height: auto; */
+  max-height: 600px;
+}
+
+
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stepsContainer h2 {
+    text-align: center;
+  }
+
+  .step::before {
+    display: none;
+  }
+
+  .stepNumber {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .stepNumber::after {
+    display: none;
+  }
+
+  .stepImage {
+    text-align: center;
+    width: 100%;
+  }
+
+  .stepContent {
+    text-align: center;
+    padding-right: 0;
+  }
+}

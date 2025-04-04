@@ -1,0 +1,44 @@
+/* FeaturesSection.module.css */
+
+.featuresSection {
+  padding: 50px 20px;
+  /* background-color: #F9F9F9; */
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.feature {
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.mainTitle {
+  text-align: center;
+  color: #2260CE;
+  font-size: 3rem;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  color: #2260CE; /* Blue title */
+}
+
+.feature p {
+  color: #222222; /* Dark text */
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .featuresGrid {
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+  }
+}

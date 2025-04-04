@@ -1,0 +1,105 @@
+/* FadeHeader.module.css */
+
+.header {
+  padding: 15px 0;
+  width: 100vw;
+  background: linear-gradient(to bottom, #2260CE, #AEC1E9); /* Blue fade background */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /* position: fixed; */
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 0px;
+  width: 80vw;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 75px;
+  margin-right: 20px;
+}
+
+.nav {
+  display: flex;
+}
+
+.navLink {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 300ms ease;
+}
+
+.navLink:hover {
+  color: #222;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loginButton,
+.registerButton {
+  margin: 0 5px;
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 300ms ease, color 200ms ease;
+}
+
+.loginButton {
+  color: white;
+  background: none;
+}
+
+.registerButton {
+  background-color: white; /* White button */
+  color: #2260CE; /* Blue text */
+  padding: 0px 25px;
+  border-radius: 100px;
+  height: 40px;
+}
+
+.loginButton:hover {
+  color: #222222;
+}
+
+.registerButton:hover {
+  color: white;
+  background-color: #222222;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav,
+  .authButtons {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .navLink,
+  .loginButton,
+  .registerButton {
+    margin: 5px 0;
+  }
+}

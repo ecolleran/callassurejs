@@ -1,0 +1,31 @@
+/* Footer.css */
+.footer {
+  background-color: #F4F7FD;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+  width: 100vw;
+  /* box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2); */
+}
+
+.footerNav {
+  margin-bottom: 10px;
+}
+
+.footerLink {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #222222;
+  transition: color 300ms ease;
+}
+
+.footerLink:hover {
+  color: #2260CE
+}
+
+.footerCopyright {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 10px;
+}

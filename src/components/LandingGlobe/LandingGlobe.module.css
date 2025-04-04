@@ -1,0 +1,68 @@
+.globeSection {
+  /* background-color: #F4F7FD; */
+  background: linear-gradient(#F4F7FD, white)
+}
+
+.container {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 100vh;
+  gap: 100px;
+}
+
+.leftSection {
+    overflow-y: auto;
+    /* hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* hide scrollbar for chrome, safari and opera */
+  .leftSection::-webkit-scrollbar {
+    display: none;
+  }
+
+.textContainer {
+  display: flex;
+  height: 50vh;
+  max-width: 500px;
+}
+
+.textBlock {
+  margin: auto;
+}
+
+.rightSection {
+  display: flex;
+  position: sticky; /* Or position: fixed */
+  top: 0px;
+  height: 100vh;
+}
+
+.globeImg {
+  max-width: 380px;
+  margin: auto;
+}
+
+.space {
+  margin-bottom: 500px;
+}
+
+.label {
+  color: #2260CE;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.text {
+  margin-top: 0px;
+  color: #222;
+  font-weight: 500;
+  font-size: 2.6em;
+  line-height: 1.2em;
+}
