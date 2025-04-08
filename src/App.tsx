@@ -1,7 +1,7 @@
 // App.tsx
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom'; // Import useLocation
-import HomePage from './pages/HomePage.tsx'; // Replace with your homepage
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import HomePage from './pages/HomePage.tsx';
 import Header from './components/Header/Header.tsx';
 import FadeHeader from './components/FadeHeader/FadeHeader.tsx';
 import StoryPage from './pages/StoryPage.tsx';

@@ -1,13 +1,17 @@
 // pages/ContactPage/ContactPage.tsx
-// import Header from '../components/Header/Header';
 import ContactForm from '../components/ContactSection/ContactSection';
 import Footer from '../components/Footer/Footer';
-// import styles from '../ContactPage.module.css';
+import { Helmet } from 'react-helmet';
+
 
 function ContactPage() {
+
+
   return (
     <div style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', margin: 0, padding: 0 }}>
-      {/* <Header /> */}
+      <Helmet>
+        <title>Contact Us - CallAssure</title>
+      </Helmet>
       <ContactForm />
       <Footer />
     </div>
