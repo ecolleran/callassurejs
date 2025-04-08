@@ -7,7 +7,7 @@ function StoryPage() {
   return (
     <div style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', margin: 0, padding: 0 }}>
       <Helmet>
-        <title>Our Story - CallAssure</title>
+        <title>Our Story | CallAssure</title>
       </Helmet>
       <StorySection />
       <Footer />

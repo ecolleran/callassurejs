@@ -9,7 +9,7 @@ function HowItWorksPage() {
   return (
     <div style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', margin: 0, padding: 0 }}>
       <Helmet>
-        <title>How It Works - CallAssure</title>
+        <title>How It Works | CallAssure</title>
       </Helmet>
       <HeroSection />
       <StepsSection />

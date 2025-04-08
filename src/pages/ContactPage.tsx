@@ -10,7 +10,7 @@ function ContactPage() {
   return (
     <div style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', margin: 0, padding: 0 }}>
       <Helmet>
-        <title>Contact Us - CallAssure</title>
+        <title>Contact Us | CallAssure</title>
       </Helmet>
       <ContactForm />
       <Footer />
