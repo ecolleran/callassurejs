@@ -9,6 +9,7 @@ import HowItWorksPage from './pages/HowItWorksPage.tsx';
 import ContactPage from './pages/ContactPage.tsx';
 import LoginPage from './pages/LoginPage/LoginPage.tsx';
 import RegisterPage from './pages/RegisterPage/RegisterPage.tsx';
+import SetCheckInPage from "./pages/SetCheckInPage/SetCheckInPage.tsx";
 import './App.css';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route path="/ContactPage" element={<ContactPage />} />
         <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="/RegisterPage" element={<RegisterPage />} />
+        <Route path="/SetCheckInPage" element={<SetCheckInPage />} />
       </Routes>
     </>
   );

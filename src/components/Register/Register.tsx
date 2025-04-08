@@ -1,11 +1,12 @@
 import styles from './Register.module.css';
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, useLocation, useNavigate } from 'react-router-dom'; // Import useLocation
 import React, { useState, ChangeEvent } from 'react';
 
 // interface CreateAccountProps {}
 
 const CreateAccount: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate(); // Initialize useNavigate
   const searchParams = new URLSearchParams(location.search);
   const emailFromUrl = searchParams.get('email') || ''; // Get email from URL, or empty string if not present
   const [email, setEmail] = useState(emailFromUrl);
@@ -31,13 +32,23 @@ const CreateAccount: React.FC = () => {
 
   const isSubmitDisabled = !(email && fullName && password && accountType !== 'Select');
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    if (!isSubmitDisabled) {
-      // Process the form submission here
-      console.log('Account created:', { email, fullName, password, accountType });
-        // You would typically send this data to your backend
-    }
+  // const handleSubmit = (event: React.FormEvent) => {
+  //   event.preventDefault();
+  //   if (!isSubmitDisabled) {
+  //     // Process the form submission here
+  //     console.log('Account created:', { email, fullName, password, accountType });
+  //       // You would typically send this data to your backend
+  //   }
+  // };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate(
+      `/SetCheckInPage?email=${encodeURIComponent(email)}
+      &fullName=${encodeURIComponent(fullName)}
+      &password=${encodeURIComponent(password)}
+      &accountType=${encodeURIComponent(accountType)}`
+    );
   };
 
   return (
@@ -97,13 +108,15 @@ const CreateAccount: React.FC = () => {
                 {/* Add other account type options as needed */}
               </select>
             </div>
-            <button
-              type="submit"
-              className={`${styles.submitButton} ${isSubmitDisabled ? styles.submitButtonDisabled : ''}`}
-              disabled={isSubmitDisabled}
-            >
-              Create account
-            </button>
+            {/* <Link to="/SetCheckInPage"> */}
+              <button
+                type="submit"
+                className={`${styles.submitButton} ${isSubmitDisabled ? styles.submitButtonDisabled : ''}`}
+                disabled={isSubmitDisabled}
+              >
+                Create account
+              </button>
+            {/* </Link> */}
           </form>
           <div className={styles.createAccountBlock}>
             <div className={styles.createAccount}>
