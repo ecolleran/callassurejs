@@ -1,0 +1,52 @@
+.thankYouContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3em;
+  margin-bottom: 40px;
+  color: #2260CE;
+}
+
+.formContainer {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  padding: 5%;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  font-size: 2em;
+  line-height: 1.3em;
+  font-weight: 500;
+  color: #222;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.navLink {
+  color:#2260CE;
+}
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 868px) {
+  .leftSection {
+    display: none;
+  }
+
+  .rightSection {
+    margin: 0 auto;
+  }
+}

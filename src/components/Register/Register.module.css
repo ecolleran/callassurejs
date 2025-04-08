@@ -1,9 +1,11 @@
 .signupContainer {
   display: flex;
   align-items: baseline;
-  height: 100vh;
+  height: 100%;
   width: 80vw;
   margin: 0 auto;
+  /* padding-bottom: 50px; */
+
 }
 
 .leftSection {

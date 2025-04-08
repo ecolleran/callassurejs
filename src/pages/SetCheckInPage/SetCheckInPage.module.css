@@ -1,3 +1,4 @@
 .registerPage {
-  background: linear-gradient(160deg, white 60%, #2260CE);
+  background: linear-gradient(160deg, white 65%, #2260CE);
+  min-height: 100vh;
 }

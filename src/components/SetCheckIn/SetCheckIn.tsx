@@ -1,5 +1,5 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './SetCheckIn.module.css';
 
 const SetCheckIn: React.FC = () => {
@@ -8,10 +8,12 @@ const SetCheckIn: React.FC = () => {
   const emailFromUrl = searchParams.get('email') || '';
   const fullNameFromUrl = searchParams.get('fullName') || '';
   const passwordFromUrl = searchParams.get('password') || '';
+  const accountTypeFromUrl = searchParams.get('accountType')|| '';
 
   const [textOrCall, setTextOrCall] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [checkInTime, setCheckInTime] = useState('');
+  const [checkInTimeAMPM, setCheckInTimeAMPM] = useState('');
   // const navigate = useNavigate();
 
   const handleTextOrCallChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -26,20 +28,30 @@ const SetCheckIn: React.FC = () => {
     setCheckInTime(event.target.value);
   };
 
-  const isSubmitDisabled = !(phoneNumber && checkInTime && textOrCall !== 'Select');
+  const handleCheckInTimeAMPMChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setCheckInTimeAMPM(event.target.value);
+  };
+
+  const isSubmitDisabled = !textOrCall || !phoneNumber || !checkInTime;
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log('User Answers:', {
-      email: emailFromUrl,
-      fullName: fullNameFromUrl,
-      password: passwordFromUrl,
-      textOrCall,
-      phoneNumber,
-      checkInTime,
-    });
-    // In a real application, you would likely send this data to your backend
-    // navigate('/dashboard'); // Example of navigating to a dashboard
+    if (!isSubmitDisabled) {
+      console.log('User Answers:', {
+        email: emailFromUrl,
+        fullName: fullNameFromUrl,
+        password: passwordFromUrl,
+        accountType: accountTypeFromUrl,
+        textOrCall,
+        phoneNumber,
+        checkInTime,
+        checkInTimeAMPM,
+      });
+      // In a real application, you would likely send this data to your backend
+      // navigate('/dashboard'); // Example of navigating to a dashboard
+    } else {
+      alert('Please fill in all the required fields.');
+    }
   };
 
 
@@ -52,10 +64,9 @@ const SetCheckIn: React.FC = () => {
             <div className={styles.formGroup}>
               <label htmlFor="textOrCall">Text or Call</label>
               <select id="textOrCall" value={textOrCall} onChange={handleTextOrCallChange} className={styles.inputField}>
-                <option value="Select">Select</option>
+                <option value="">Select</option>
                 <option value="Text">Text</option>
                 <option value="Call">Call</option>
-                {/* Add other account type options as needed */}
               </select>
             </div>
             <div className={styles.formGroup}>
@@ -70,21 +81,29 @@ const SetCheckIn: React.FC = () => {
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="checkInTime">Desired Check-In Time</label>
-              <input
-                type="checkInTime"
-                id="checkInTime"
-                value={checkInTime}
-                onChange={handleCheckInTimeChange}
-                className={styles.inputField}
-              />
+              <div className={styles.formGroupTime}>
+                <input
+                  type="checkInTime"
+                  id="checkInTime"
+                  value={checkInTime}
+                  onChange={handleCheckInTimeChange}
+                  className={styles.inputField}
+                />
+                <select id="checkInTimeAMPM" value={checkInTimeAMPM} onChange={handleCheckInTimeAMPMChange} className={styles.meridiem}>
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </div>
             </div>
-            <button
-              type="submit"
-              className={`${styles.submitButton} ${isSubmitDisabled ? styles.submitButtonDisabled : ''}`}
-              disabled={isSubmitDisabled}
-            >
-              Submit
-            </button>
+            <Link to="/RegisterThankYouPage">
+              <button
+                type="submit"
+                className={`${styles.submitButton} ${isSubmitDisabled ? styles.submitButtonDisabled : ''}`}
+                disabled={isSubmitDisabled}
+              >
+                Submit
+              </button>
+            </Link>
           </form>
         </div>
       </div>

@@ -1,3 +1,4 @@
 .loginPage {
   background: linear-gradient(160deg, white 10%, #2260CE);
+  min-height: 100vh;
 }

@@ -30,16 +30,7 @@ const CreateAccount: React.FC = () => {
     setAccountType(event.target.value);
   };
 
-  const isSubmitDisabled = !(email && fullName && password && accountType !== 'Select');
-
-  // const handleSubmit = (event: React.FormEvent) => {
-  //   event.preventDefault();
-  //   if (!isSubmitDisabled) {
-  //     // Process the form submission here
-  //     console.log('Account created:', { email, fullName, password, accountType });
-  //       // You would typically send this data to your backend
-  //   }
-  // };
+  const isSubmitDisabled = !email || !fullName || !password || !accountType;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -102,7 +93,7 @@ const CreateAccount: React.FC = () => {
             <div className={styles.formGroup}>
               <label htmlFor="accountType">Account Type</label>
               <select id="accountType" value={accountType} onChange={handleAccountTypeChange} className={styles.inputField}>
-                <option value="Select">Select</option>
+                <option value="">Select</option>
                 <option value="Loved One">Loved One</option>
                 <option value="Family Member">Family Member</option>
                 {/* Add other account type options as needed */}
