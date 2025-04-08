@@ -3,6 +3,7 @@
 .heroContainer{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding-top: 60px;
   padding-bottom: 60px;
   width: 80vw;
@@ -40,7 +41,7 @@
   max-width: 100%; /* Image scales to container width */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 /* Media query for smaller screens */

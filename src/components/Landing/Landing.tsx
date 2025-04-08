@@ -37,7 +37,7 @@ function Landing() {
           </form>
         </div>
         <div className={styles.imageContainer}>
-          <img src="/hero-image.png" alt="Elderly person on phone" className={styles.heroImage} />
+          <img src="/landing-visual.png" alt="Family and loved one connected" className={styles.heroImage} />
         </div>
       </div>
     </section>

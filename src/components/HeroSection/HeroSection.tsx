@@ -12,7 +12,7 @@ function HeroSection() {
           </p>
         </div>
         <div className={styles.imageContainer}>
-          <img src="/hero-image.png" alt="Elderly person on phone" className={styles.heroImage} />
+          <img src="/HIW-landing-visual.png" alt="screens of check-in call and message" className={styles.heroImage} />
         </div>
       </div>
     </section>

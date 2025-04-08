@@ -27,12 +27,12 @@
 }
 
 .step::before {
-  /* content: ''; */
+  content: '';
   position: absolute;
   top: 95px;
   left: 30px;
   width: 3px;
-  height: calc(92%);
+  height: calc(100%);
   background-color: #2260CE;
 }
 
@@ -57,7 +57,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: #F4F7FD;
   border: 4px solid #2260CE;
 }
 .stepContent {

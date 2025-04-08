@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from  './SocialIcons.module.css';
 
 function SocialIcons() {
@@ -11,7 +12,9 @@ function SocialIcons() {
       >
         <img src="/linkedin.png" alt="LinkedIn" className={styles.socialIconImg} />
       </a>
-      <img src="/logo.png" alt="CallAssure Logo" className={styles.socialIconImg} />
+      <Link to="/HomePage">
+            <img src="/logo.png" alt="CallAssure Logo" className={styles.socialIconImg} />
+      </Link>
       <a
         href="https://www.facebook.com"
         target="_blank"

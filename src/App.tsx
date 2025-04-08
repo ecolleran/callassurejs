@@ -1,4 +1,5 @@
 // App.tsx
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom'; // Import useLocation
 import HomePage from './pages/HomePage.tsx'; // Replace with your homepage
 import Header from './components/Header/Header.tsx';
@@ -14,6 +15,10 @@ function App() {
 
   const location = useLocation();
   const pathname = location.pathname;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   let headerComponent = <></>;
 
