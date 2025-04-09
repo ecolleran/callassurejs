@@ -29,7 +29,7 @@
 .step::before {
   content: '';
   position: absolute;
-  top: 95px;
+  top: 110px;
   left: 30px;
   width: 3px;
   height: calc(100%);
@@ -63,6 +63,7 @@
 .stepContent {
   margin-right: 40px;
   flex: 1;
+  min-height: 400px;
 }
 
 .stepContent h3 {

@@ -2,9 +2,8 @@
 
 .heroContainer{
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 90px;
   padding-bottom: 60px;
   width: 80vw;
   margin: 0 auto;
@@ -12,14 +11,12 @@
 
 .textContainer {
   flex: 1; /* Take up available space */
-  max-width: 500px; /* Adjust as needed */
   padding-right: 40px; /* Space between text and image */
 }
 
 .heroTitle {
   font-size: 3rem; /* Adjust as needed */
   font-weight: bold;
-  /* text-align: center; */
   margin-bottom: 20px;
   color: #2260CE; /* Blue title */
   line-height: 1.2;
@@ -41,14 +38,13 @@
   max-width: 100%; /* Image scales to container width */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: Rounded corners */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-  .heroSection {
+  .heroContainer {
     flex-direction: column; /* Stack items vertically */
-    text-align: center; /* Center text on smaller screens */
+    align-items: baseline;
   }
 
   .textContainer {
@@ -57,6 +53,8 @@
   }
 
   .imageContainer {
+    margin-top: 50px;
+    /* width: 70vw; */
     order: -1; /* Place image above text on smaller screens */
   }
 }
