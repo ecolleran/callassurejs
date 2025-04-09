@@ -7,7 +7,7 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.navContainer}>
         <div className={styles.logoContainer}>
-          <Link to="/HomePage">
+          <Link to="/">
             <img src="/white-logo.png" alt="CallAssure Logo" className={styles.logo} />
           </Link>
           <nav className={styles.nav}>

@@ -6,7 +6,7 @@ function LoginSigninHeader() {
   return (
     <header className={styles.header}>
         <div className={styles.logoContainer}>
-        <Link to="/HomePage">
+        <Link to="/">
           <img src="/logo.png" alt="CallAssure Logo" className={styles.logo} />
         </Link>
       </div>

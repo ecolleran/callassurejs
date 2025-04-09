@@ -5,7 +5,7 @@ function LoginRegisterFooter() {
   return (
     <footer className={styles.footer}>
       <nav className={styles.footerNav}>
-        <Link to="/HomePage" className={styles.footerCopyright}>&copy; CallAssure</Link>
+        <Link to="/" className={styles.footerCopyright}>&copy; CallAssure</Link>
         <a href="/terms" className={styles.footerLink}>Privacy & Terms</a>
       </nav>
     </footer>

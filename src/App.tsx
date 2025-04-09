@@ -1,6 +1,6 @@
 // App.tsx
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage.tsx';
 import Header from './components/Header/Header.tsx';
 import FadeHeader from './components/FadeHeader/FadeHeader.tsx';
@@ -24,7 +24,7 @@ function App() {
 
   let headerComponent = <></>;
 
-  if (pathname === '/HomePage') {
+  if (pathname === '/') {
     headerComponent = <FadeHeader />;
   } else if (
     pathname === '/HowItWorksPage' ||
@@ -38,8 +38,8 @@ function App() {
     <>
       {headerComponent}
       <Routes>
-        <Route path="/" element={<Navigate to="/HomePage" />} />
-        <Route path="/HomePage" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/HomePage" element={<HomePage />} /> */}
         <Route path="/HowItWorksPage" element={<HowItWorksPage />} />
         <Route path="/StoryPage" element={<StoryPage />} />
         <Route path="/ContactPage" element={<ContactPage />} />

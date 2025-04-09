@@ -12,7 +12,7 @@ function SocialIcons() {
       >
         <img src="/linkedin.png" alt="LinkedIn" className={styles.socialIconImg} />
       </a>
-      <Link to="/HomePage">
+      <Link to="/">
             <img src="/logo.png" alt="CallAssure Logo" className={styles.socialIconImg} />
       </Link>
       <a
