@@ -14,7 +14,7 @@
 }
 
 .storyImage {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   margin-top: 50px;
   border-radius: 8px;
@@ -24,7 +24,6 @@
 .textColumn {
   flex: 1;
   padding-left: 30px;
-  /* padding-right: 30px; */
 }
 
 .storyTitle {
@@ -49,11 +48,11 @@
 
   .imageColumn,
   .textColumn {
-    flex: 1;
-    padding: 0;
+    width: 100%;
   }
 
   .textColumn {
     padding-top: 20px;
+    padding-left: 0px;
   }
 }
