@@ -2,8 +2,8 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage.tsx';
-import Header from './components/Header/Header.tsx';
-import FadeHeader from './components/FadeHeader/FadeHeader.tsx';
+import Header from './components/Header/PlainHeader/Header.tsx';
+import FadeHeader from './components/Header/FadeHeader/FadeHeader.tsx';
 import StoryPage from './pages/StoryPage.tsx';
 import HowItWorksPage from './pages/HowItWorksPage.tsx';
 import ContactPage from './pages/ContactPage.tsx';

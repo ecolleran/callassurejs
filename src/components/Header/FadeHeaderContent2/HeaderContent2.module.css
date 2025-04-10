@@ -1,0 +1,21 @@
+/* Header.module.css */
+
+.minimized {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.hamburger {
+  width: 30px;
+  height: auto;
+}
+
+.hamburgerLink {
+  transition: opacity 300ms ease;
+}
+
+.hamburgerLink:hover {
+  opacity: 0.6;
+}

@@ -1,28 +1,10 @@
 /* Header.module.css */
 
-.header {
-  padding: 15px 0;
-  width: 100vw;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.navContainer {
+.expanded {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  margin-top: 0px;
-  width: 80vw;
-}
-
-.logoContainer {
-  display: flex;
   align-items: center;
-}
-
-.logo {
-  height: 75px;
-  margin-right: 20px;
+  width: 100%;
 }
 
 .nav {
