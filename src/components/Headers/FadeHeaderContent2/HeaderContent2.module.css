@@ -10,12 +10,10 @@
 .hamburger {
   width: 30px;
   height: auto;
-}
-
-.hamburgerLink {
   transition: opacity 300ms ease;
 }
 
-.hamburgerLink:hover {
+.hamburger:hover {
   opacity: 0.6;
+  cursor: pointer;
 }

@@ -1,4 +1,4 @@
-import LoginSigninHeader from "../../components/LoginRegisterHeader/LoginSigninHeader";
+import LoginSigninHeader from "../../components/Headers/LoginRegisterHeader/LoginSigninHeader";
 import Login from "../../components/Login/Login";
 import LoginRegisterFooter from "../../components/LoginRegisterFooter/LoginRegisterFooter";
 import styles from './LoginPage.module.css';

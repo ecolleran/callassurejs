@@ -1,0 +1,39 @@
+.header {
+  margin: 15px 0px;
+  width: 100vw;
+  background-color: white;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 0px;
+  width: 80vw;
+}
+
+.logoLink {
+  transition: opacity 300ms ease;
+}
+
+.logoLink:hover {
+  opacity: 0.6;
+}
+
+.logo {
+  height: 75px;
+  width: 85px;
+  margin-right: 20px;
+}
+
+.exitButton {
+  height: 20px;
+  width: 20px;
+  transition: opacity 300ms ease;
+}
+
+.exitButton:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

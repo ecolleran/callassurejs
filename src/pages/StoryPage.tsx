@@ -1,4 +1,3 @@
-// import Header from '../components/Header/Header';
 import StorySection from '../components/StorySection/StorySection';
 import Footer from '../components/Footer/Footer';
 import { Helmet } from 'react-helmet';
