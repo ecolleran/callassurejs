@@ -77,4 +77,12 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .content {
+    max-width: 80vw;
+  }
+
+  .description {
+    width: 80%;
+  }
 }

@@ -17,7 +17,7 @@
 }
 
 .landingTitle {
-  font-size: 3rem; /* Adjust as needed */
+  font-size: 2.9rem; /* Adjust as needed */
   font-weight: bold;
   margin-bottom: 20px;
   color: #2260CE; /* Blue title */
@@ -54,7 +54,7 @@
   background-color: #2260CE; /* Blue button */
   color: white;
   border: none;
-  /* padding: 10px 20px; */
+  line-height: 1.2em;
   font-size: 1em;
   border-radius: 30px;
   cursor: pointer;
@@ -79,11 +79,18 @@
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
+
+@media (max-width: 900px) {
+  .landingTitle {
+    font-size: 2.5rem; /* Adjust as needed */
+  }
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-  .heroSection {
+  .landingContainer {
     flex-direction: column; /* Stack items vertically */
-    text-align: center; /* Center text on smaller screens */
+    align-items: baseline;
   }
 
   .textContainer {
@@ -92,6 +99,9 @@
   }
 
   .imageContainer {
+    display: none;
+    margin-top: 50px;
+    /* width: 70vw; */
     order: -1; /* Place image above text on smaller screens */
   }
 
