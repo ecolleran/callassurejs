@@ -13,7 +13,7 @@ function SocialIcons() {
         <img src="/linkedin.png" alt="LinkedIn" className={styles.socialIconImg} />
       </a>
       <Link to="/">
-            <img src="/logo.png" alt="CallAssure Logo" className={styles.socialIconImg} />
+            <img src="/logo.png" alt="CallAssure Logo" className={styles.socialCallAssure} />
       </Link>
       <a
         href="https://www.facebook.com"

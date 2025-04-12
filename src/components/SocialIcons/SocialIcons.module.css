@@ -12,9 +12,22 @@
 
 .socialIconLink:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .socialIconImg {
   height: 36px;
+  width: 36px;
   margin: 0 5px;
+}
+
+.socialCallAssure {
+  height: 36px;
+  width: 42px;
+  transition: opacity 300ms ease;
+}
+
+.socialCallAssure:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
