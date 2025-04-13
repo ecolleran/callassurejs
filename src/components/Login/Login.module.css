@@ -143,4 +143,8 @@
   .loginFormContainer {
     width: 90vw;
   }
+
+  .title {
+    text-align: center;
+  }
 }
