@@ -138,3 +138,9 @@
     padding: 0 10px;
   }
 }
+
+@media (max-width: 400px) {
+  .loginFormContainer {
+    width: 90vw;
+  }
+}
