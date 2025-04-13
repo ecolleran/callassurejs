@@ -1,56 +1,20 @@
-.signupContainer {
-  display: flex;
-  align-items: baseline;
-  width: 80vw;
-  margin: 0 auto;
-}
-
-.leftSection {
-  flex: 1;
-  padding-right: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.rightSection {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  font-size: 1.3em;
-  line-height: 1.5em;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.description {
-  font-size: 1.1em;
-  color: #222;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.textContentBold {
-  font-weight: 700;
+.signupSection {
+  padding-top: 20px;
 }
 
 .formContainer {
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 35px;
+  margin: 10px auto 70px;
   background-color: white;
-  padding-top: 30px;
+  padding-top: 5px;
+  padding-bottom: 1px;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  width: 470px; /* Adjust width as needed */
+  width: 45vw;
+  max-width: 530px;
 }
 
-.formTitle {
-  font-size: 1.6rem;
+.title {
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 15px;
   padding: 0px 40px;
@@ -58,11 +22,13 @@
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
   padding: 0px 40px;
 }
 
 .formGroup {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 label {
@@ -72,13 +38,12 @@ label {
 }
 
 .inputField {
-  margin-top: 1px;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
   width: 100%;
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  box-sizing: border-box;
 }
 
 .formGroupTime {
@@ -144,12 +109,18 @@ label {
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 868px) {
-  .leftSection {
-    display: none;
+@media (max-width: 880px) {
+  .formContainer {
+    width: 385px;
   }
 
-  .rightSection {
-    margin: 0 auto;
+  .title {
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  .form {
+    padding: 0 10px;
   }
 }

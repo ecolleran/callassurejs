@@ -1,14 +1,18 @@
 /* LoginPage.module.css */
 
+.loginSection {
+  padding-top: 20px;
+}
+
 .loginFormContainer {
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 70px;
+  margin: 10px auto 70px;
   background-color: white;
   padding-top: 5px;
+  padding-bottom: 1px;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  width: 450px; /* Adjust width as needed */
+  width: 45vw;
+  max-width: 530px;
 }
 
 .title {
@@ -32,7 +36,7 @@
 .label {
   font-weight: bold;
   margin-bottom: 5px;
-  color: #333;
+  color: #222;
 }
 
 .input {
@@ -41,7 +45,7 @@
   border-radius: 5px;
   font-size: 1rem;
   width: 100%;
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  box-sizing: border-box;
 }
 
 .passwordRow {
@@ -78,7 +82,7 @@
 }
 
 .rememberMeLabel {
-  color: #333;
+  color: #222;
   font-size: 0.8rem;
 }
 
@@ -101,7 +105,6 @@
 
 .createAccountBlock {
   display: flex;
-  width: 442;
   background-color: #f9f9f9;
   height: 60px;
   margin: 4px;
@@ -110,7 +113,7 @@
 
 .createAccount {
   text-align: center;
-  margin: auto auto;
+  margin: auto;
   font-size: 0.9rem;
 }
 
@@ -120,9 +123,18 @@
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 468px) {
+@media (max-width: 880px) {
   .loginFormContainer {
-    width: 80vw;
-    margin-top: 0px;
+    width: 385px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  .form {
+    padding: 0 10px;
   }
 }

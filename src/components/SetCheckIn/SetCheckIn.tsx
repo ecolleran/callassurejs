@@ -56,56 +56,54 @@ const SetCheckIn: React.FC = () => {
 
 
   return (
-    <div className={styles.signupContainer}>
-      <div className={styles.rightSection}>
-        <div className={styles.formContainer}>
-          <h3 className={styles.formTitle}>Set Your Check-In Time</h3>
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <div className={styles.formGroup}>
-              <label htmlFor="textOrCall">Text or Call</label>
-              <select id="textOrCall" value={textOrCall} onChange={handleTextOrCallChange} className={styles.inputField}>
-                <option value="">Select</option>
-                <option value="Text">Text</option>
-                <option value="Call">Call</option>
-              </select>
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="phoneumber">Phone Number</label>
+    <div className={styles.signupSection}>
+      <div className={styles.formContainer}>
+        <h3 className={styles.title}>Set Your Check-In Time</h3>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <div className={styles.formGroup}>
+            <label htmlFor="textOrCall">Text or Call</label>
+            <select id="textOrCall" value={textOrCall} onChange={handleTextOrCallChange} className={styles.inputField}>
+              <option value="">Select</option>
+              <option value="Text">Text</option>
+              <option value="Call">Call</option>
+            </select>
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="phoneumber">Phone Number</label>
+            <input
+              type="phoneNumber"
+              id="phoneNumber"
+              value={phoneNumber}
+              onChange={handlePhoneNumberChange}
+              className={styles.inputField}
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="checkInTime">Desired Check-In Time</label>
+            <div className={styles.formGroupTime}>
               <input
-                type="phoneNumber"
-                id="phoneNumber"
-                value={phoneNumber}
-                onChange={handlePhoneNumberChange}
+                type="checkInTime"
+                id="checkInTime"
+                value={checkInTime}
+                onChange={handleCheckInTimeChange}
                 className={styles.inputField}
               />
+              <select id="checkInTimeAMPM" value={checkInTimeAMPM} onChange={handleCheckInTimeAMPMChange} className={styles.meridiem}>
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
             </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="checkInTime">Desired Check-In Time</label>
-              <div className={styles.formGroupTime}>
-                <input
-                  type="checkInTime"
-                  id="checkInTime"
-                  value={checkInTime}
-                  onChange={handleCheckInTimeChange}
-                  className={styles.inputField}
-                />
-                <select id="checkInTimeAMPM" value={checkInTimeAMPM} onChange={handleCheckInTimeAMPMChange} className={styles.meridiem}>
-                  <option value="AM">AM</option>
-                  <option value="PM">PM</option>
-                </select>
-              </div>
-            </div>
-            <Link to="/RegisterThankYouPage">
-              <button
-                type="submit"
-                className={`${styles.submitButton} ${isSubmitDisabled ? styles.submitButtonDisabled : ''}`}
-                disabled={isSubmitDisabled}
-              >
-                Submit
-              </button>
-            </Link>
-          </form>
-        </div>
+          </div>
+          <Link to="/RegisterThankYouPage">
+            <button
+              type="submit"
+              className={`${styles.submitButton} ${isSubmitDisabled ? styles.submitButtonDisabled : ''}`}
+              disabled={isSubmitDisabled}
+            >
+              Submit
+            </button>
+          </Link>
+        </form>
       </div>
     </div>
   );

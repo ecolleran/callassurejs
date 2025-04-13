@@ -1,52 +1,103 @@
+/* RegisterThankYou.module.css */
+
 .thankYouContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80vw;
-  margin: 0 auto;
+  max-width: 960px; /* Added a maximum width for larger screens */
+  margin: 0px auto; /* Added top/bottom margin for spacing */
+  padding: 20px; /* Added padding around the container */
 }
 
 .title {
-  font-size: 3em;
-  margin-bottom: 40px;
+  font-size: 3.5em; /* Slightly larger title */
+  margin-bottom: 60px; /* Increased margin below title */
   color: #2260CE;
+  font-weight: bold; /* Ensure it's bold */
 }
 
 .formContainer {
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More subtle shadow */
   width: 90%;
-  padding: 5%;
-  margin-bottom: 50px;
+  max-width: 600px; /* Limit the width of the form container for better readability */
+  padding: 40px; /* Increased padding inside the container */
+  margin-bottom: 70px; /* Increased margin below the container */
+  text-align: center; /* Center text within the form container */
 }
 
 .subtitle {
-  font-size: 2em;
-  line-height: 1.3em;
+  font-size: 1.8em; /* Slightly smaller but still prominent subtitle */
+  line-height: 1.4em;
   font-weight: 500;
-  color: #222;
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 30px; /* Added margin below subtitle */
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.2em; /* Slightly smaller paragraph text for better flow */
+  line-height: 1.6; /* Improved line height for readability */
+  margin-bottom: 20px; /* Added margin between paragraphs */
+  color: #444; /* Darker text */
 }
 
 .navLink {
-  color:#2260CE;
+  color: #2260CE;
+  font-weight: bold; /* Make links stand out */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease-in-out; /* Smooth hover transition */
 }
 
-
-
-
+.navLink:hover {
+  color: #004080; /* Darker blue on hover */
+  text-decoration: underline; /* Add underline on hover for clarity */
+}
 
 /* Media queries for responsiveness */
-@media (max-width: 868px) {
-  .leftSection {
-    display: none;
+@media (max-width: 880px) {
+  .thankYouContainer {
+    width: 95vw; /* Adjust width for smaller screens */
+    margin-top: 20px; /* Adjust top margin on smaller screens */
+    padding: 10px; /* Adjust padding on smaller screens */
   }
 
-  .rightSection {
-    margin: 0 auto;
+  .title {
+    font-size: 2.5em; /* Smaller title on smaller screens */
+    margin-bottom: 30px;
+  }
+
+  .formContainer {
+    padding: 30px;
+    margin-bottom: 40px;
+  }
+
+  .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+/* Further refinements for even smaller screens */
+@media (max-width: 576px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .formContainer {
+    padding: 20px;
+  }
+
+  .subtitle {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 0.9em;
   }
 }

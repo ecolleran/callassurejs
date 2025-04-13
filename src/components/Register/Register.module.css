@@ -131,7 +131,7 @@ label {
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 868px) {
+@media (max-width: 880px) {
   .leftSection {
     display: none;
   }
@@ -139,11 +139,21 @@ label {
   .rightSection {
     margin: 0 auto;
   }
-}
 
-@media (max-width: 650px) {
   .formContainer {
-    width: 80vw;
+    width: 385px;
     padding-top: 15px;
+  }
+
+  .formTitle {
+    font-size: 1.6rem;
+    line-height: 1.2em;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .form {
+    padding: 0 10px;
   }
 }
