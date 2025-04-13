@@ -4,7 +4,6 @@
   height: 100%;
   width: 80vw;
   margin: 0 auto;
-  /* padding-bottom: 50px; */
 
 }
 
@@ -139,5 +138,11 @@ label {
 
   .rightSection {
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .formContainer {
+    width: 80vw;
   }
 }

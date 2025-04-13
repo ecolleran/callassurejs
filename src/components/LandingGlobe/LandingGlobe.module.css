@@ -5,12 +5,12 @@
 
 .container {
   display: flex;
+  align-items: center;
   width: 80vw;
   margin: 0 auto;
   margin-top: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 20px;
   gap: 100px;
 }
 
@@ -22,7 +22,6 @@
 
 .textContainer {
   display: flex;
-  height: 50vh;
   max-width: 500px;
 }
 
@@ -32,9 +31,8 @@
 
 .rightSection {
   display: flex;
-  position: sticky; /* Or position: fixed */
+  position: relative; /* Or position: fixed */
   top: 0px;
-  height: 100vh;
 }
 
 .globeImg {
@@ -62,7 +60,7 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .label {
     font-size: 1.4em;
   }
@@ -74,11 +72,24 @@
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-  .label {
-    font-size: 1.4em;
+
+  .globeSection {
+    /* background-color: #F4F7FD; */
+    background: linear-gradient(#F4F7FD)
   }
 
-  .text {
-  font-size: 1.6em;
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .rightSection {
+    order: -1;
+    position: relative;
+  }
+
+  .textContainer {
+    display: flex;
+    max-width: 100%;
   }
 }
