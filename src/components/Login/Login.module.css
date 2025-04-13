@@ -122,7 +122,7 @@
 /* Media queries for responsiveness */
 @media (max-width: 468px) {
   .loginFormContainer {
-    width: 90%;
-    padding: 30px;
+    width: 80vw;
+    margin-top: 0px;
   }
 }

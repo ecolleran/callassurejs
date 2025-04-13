@@ -144,5 +144,6 @@ label {
 @media (max-width: 650px) {
   .formContainer {
     width: 80vw;
+    padding-top: 15px;
   }
 }
