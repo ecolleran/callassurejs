@@ -2,9 +2,9 @@
 
 .landingContainer{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
+  justify-content: space-between;
+  padding-top: 80px;
   padding-bottom: 60px;
   width: 80vw;
   margin: 0 auto;
@@ -12,8 +12,7 @@
 
 .textContainer {
   flex: 1; /* Take up available space */
-  max-width: 700px; /* Adjust as needed */
-  padding-right: 30px; /* Space between text and image */
+  padding-right: 40px; /* Space between text and image */
 }
 
 .landingTitle {
@@ -69,14 +68,13 @@
 .imageContainer {
   flex: 1; /* Take up available space */
   display: flex;
-  justify-content: center; /* Center image horizontally */
+  justify-content: flex-end;
 }
 
 .heroImage {
-  max-width: 100%; /* Image scales to container width */
+  width: 100%; /* Image scales to container width */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: Rounded corners */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 
