@@ -1,177 +1,140 @@
-/* signup.module.css */
+/* SetCheckIn.module.css */
 
-.signupContainer {
-  display: flex; /* Enable flexbox for layout */
-  align-items: baseline; /* Align items along the baseline */
-  height: 100%;
-  width: 80vw; /* Set width relative to viewport width */
-  margin: 0 auto; /* Center the container horizontally */
-}
-
-.leftSection,
-.rightSection {
-  flex: 1; /* Distribute available space equally between sections */
+.signupSection {
+  padding-top: 20px;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: center; /* Center content vertically within the section */
-}
-
-.leftSection {
-  padding-right: 50px; /* Add spacing to the right of the left section */
-}
-
-.rightSection {
-  align-items: center; /* Center content horizontally within the right section */
-}
-
-.title {
-  font-size: 1.3em;
-  line-height: 1.5;
-  margin-bottom: 20px; /* Add spacing below the title */
-  color: #222;
-}
-
-.description {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 15px; /* Add spacing below the description */
-  color: #222;
-}
-
-.textContentBold {
-  font-weight: 700; /* Make text bold */
+  justify-content: center;
+  align-items: center;
 }
 
 .formContainer {
-  margin: 10px auto 70px; /* Add top, bottom margin and center horizontally */
   background-color: white;
   padding-top: 5px;
   padding-bottom: 1px;
-  border-radius: 10px; /* Round the corners */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-  width: 45vw; /* Set width relative to viewport width */
-  max-width: 500px; /* Set a maximum width */
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 45vw;
+  max-width: 530px; /* Limit the width of the form container for better readability */
+  margin-bottom: 70px; /* Increased margin below the container */
 }
 
-.formTitle {
+.title {
   font-size: 1.8rem;
-  line-height: 1.1;
   font-weight: bold;
-  margin-bottom: 15px; /* Add spacing below the form title */
-  padding: 0 40px; /* Add horizontal padding */
+  margin-bottom: 15px;
+  padding: 0px 40px;
   color: #222;
 }
 
 .form {
-  display: flex; /* Enable flexbox for form elements */
-  flex-direction: column; /* Stack form elements vertically */
-  padding: 0 40px; /* Add horizontal padding to the form */
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
 }
 
 .formGroup {
-  margin-bottom: 20px; /* Add spacing below each form group */
+  margin-bottom: 20px;
 }
 
 label {
   font-weight: bold;
-  margin-bottom: 5px; /* Add spacing below the label */
+  margin-bottom: 5px;
   color: #333;
 }
 
 .inputField {
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px; /* Round the corners */
+  border-radius: 5px;
   font-size: 1rem;
   width: 100%;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
+}
+
+.formGroupTime {
+  display: flex;
+}
+
+.meridiem {
+  margin-top: 1px;
+  padding: 12px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  height: 50px;
 }
 
 .submitButton {
   background-color: #2260CE;
   color: white;
   padding: 15px 20px;
-  margin-top: 5px; /* Add spacing above the button */
-  margin-bottom: 40px; /* Add spacing below the button */
+  margin-top: 5px;
+  margin-bottom: 40px;
   border: none;
-  border-radius: 5px; /* Round the corners */
+  border-radius: 5px;
   font-size: 1rem;
-  cursor: pointer; /* Indicate that the element is interactive */
+  cursor: pointer;
   width: 100%;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease;
 }
 
 .submitButton:hover {
-  background-color: #222; /* Darken the background on hover */
+  background-color: #222;
 }
 
 .submitButtonDisabled {
-  background-color: #BBCBED; /* Indicate that the button is disabled */
-  cursor: auto; /* Revert to the default cursor */
+  background-color: #BBCBED; /* Lighter background color */
+  cursor: auto;
 }
 
 .submitButtonDisabled:hover {
-  background-color: #BBCBED; /* Maintain the disabled appearance on hover */
+  background-color: #BBCBED; /* Maintain the disabled look on hover */
 }
 
 .createAccountBlock {
-  display: flex; /* Enable flexbox for layout */
+  display: flex;
   background-color: #f9f9f9;
   height: 60px;
   margin: 4px;
-  border-radius: 5px; /* Round the corners */
+  border-radius: 5px;
 }
 
 .createAccount {
-  text-align: center; /* Center text horizontally */
-  margin: auto; /* Center vertically and horizontally within the block */
+  text-align: center;
+  margin: auto;
   font-size: 0.9rem;
 }
 
 .createAccount a {
   color: #2260CE;
-  text-decoration: none; /* Remove the default underline */
+  text-decoration: none;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 880px) {
-  .signupContainer {
-    width: 100%; /* Take full width on smaller screens */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-  }
-
-  .leftSection {
-    display: none; /* Hide the left section on smaller screens */
-  }
-
-  .rightSection {
-    display: block; /* Make the right section a block-level element */
-    padding-top: 20px; /* Add top padding */
-    margin: 0 auto; /* Center horizontally */
-  }
-
   .formContainer {
-    width: 385px; /* Set a fixed width for the form container on smaller screens */
+    width: 385px;
   }
 
-  .formTitle {
+  .title {
     font-size: 1.6rem;
-    padding: 0 10px; /* Adjust horizontal padding */
-    margin-bottom: 10px; /* Adjust bottom margin */
+    padding-bottom: 10px;
+    padding: 0 10px;
   }
 
   .form {
-    padding: 0 10px; /* Adjust horizontal padding */
+    padding: 0 10px;
   }
 }
 
 @media (max-width: 400px) {
   .formContainer {
-    width: 90vw; /* Make the form container wider relative to the viewport */
+    width: 90vw;
   }
 
-  .formTitle {
-    font-size: 1.4em;
+  .title {
+    font: size 1.4em;
   }
 }

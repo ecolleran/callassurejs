@@ -2,3 +2,9 @@
   background: linear-gradient(160deg, white 65%, #2260CE);
   min-height: 100vh;
 }
+
+@media (max-width: 880px) {
+  .registerPage {
+    background: linear-gradient(160deg, white 10%, #2260CE);
+  }
+}
