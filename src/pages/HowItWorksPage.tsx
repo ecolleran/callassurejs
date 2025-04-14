@@ -4,10 +4,17 @@ import FeaturesSection from '../components/FeaturesSection/FeaturesSection';
 import CallToAction from '../components/CallToAction/CallToAction';
 import Footer from '../components/Footer/Footer';
 import { Helmet } from 'react-helmet';
+import { motion as m } from 'framer-motion';
+
 
 function HowItWorksPage() {
   return (
-    <div style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', margin: 0, padding: 0 }}>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1}}
+      transition={{duration: 0.8, ease: "easeOut"}}
+      style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', margin: 0, padding: 0 }}
+      >
       <Helmet>
         <title>How It Works | CallAssure</title>
       </Helmet>
@@ -16,7 +23,7 @@ function HowItWorksPage() {
       <FeaturesSection />
       <CallToAction />
       <Footer />
-    </div>
+    </m.div>
   );
 }
 
