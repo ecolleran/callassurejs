@@ -1,136 +1,177 @@
-.signupSection {
-  padding-top: 20px;
+/* signup.module.css */
+
+.signupContainer {
+  display: flex; /* Enable flexbox for layout */
+  align-items: baseline; /* Align items along the baseline */
+  height: 100%;
+  width: 80vw; /* Set width relative to viewport width */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
-.formContainer {
-  margin: 10px auto 70px;
-  background-color: white;
-  padding-top: 5px;
-  padding-bottom: 1px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  width: 45vw;
-  max-width: 530px;
+.leftSection,
+.rightSection {
+  flex: 1; /* Distribute available space equally between sections */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically within the section */
+}
+
+.leftSection {
+  padding-right: 50px; /* Add spacing to the right of the left section */
+}
+
+.rightSection {
+  align-items: center; /* Center content horizontally within the right section */
 }
 
 .title {
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-bottom: 20px; /* Add spacing below the title */
+  color: #222;
+}
+
+.description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px; /* Add spacing below the description */
+  color: #222;
+}
+
+.textContentBold {
+  font-weight: 700; /* Make text bold */
+}
+
+.formContainer {
+  margin: 10px auto 70px; /* Add top, bottom margin and center horizontally */
+  background-color: white;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  border-radius: 10px; /* Round the corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  width: 45vw; /* Set width relative to viewport width */
+  max-width: 500px; /* Set a maximum width */
+}
+
+.formTitle {
   font-size: 1.8rem;
+  line-height: 1.1;
   font-weight: bold;
-  margin-bottom: 15px;
-  padding: 0px 40px;
+  margin-bottom: 15px; /* Add spacing below the form title */
+  padding: 0 40px; /* Add horizontal padding */
   color: #222;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  padding: 0px 40px;
+  display: flex; /* Enable flexbox for form elements */
+  flex-direction: column; /* Stack form elements vertically */
+  padding: 0 40px; /* Add horizontal padding to the form */
 }
 
 .formGroup {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Add spacing below each form group */
 }
 
 label {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Add spacing below the label */
   color: #333;
 }
 
 .inputField {
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 5px; /* Round the corners */
   font-size: 1rem;
   width: 100%;
-  box-sizing: border-box;
-}
-
-.formGroupTime {
-  display: flex;
-}
-
-.meridiem {
-  margin-top: 1px;
-  padding: 12px;
-  margin-left: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
-  height: 50px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .submitButton {
   background-color: #2260CE;
   color: white;
   padding: 15px 20px;
-  margin-top: 5px;
-  margin-bottom: 40px;
+  margin-top: 5px; /* Add spacing above the button */
+  margin-bottom: 40px; /* Add spacing below the button */
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; /* Round the corners */
   font-size: 1rem;
-  cursor: pointer;
+  cursor: pointer; /* Indicate that the element is interactive */
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .submitButton:hover {
-  background-color: #222;
+  background-color: #222; /* Darken the background on hover */
 }
 
 .submitButtonDisabled {
-  background-color: #BBCBED; /* Lighter background color */
-  cursor: auto;
+  background-color: #BBCBED; /* Indicate that the button is disabled */
+  cursor: auto; /* Revert to the default cursor */
 }
 
 .submitButtonDisabled:hover {
-  background-color: #BBCBED; /* Maintain the disabled look on hover */
+  background-color: #BBCBED; /* Maintain the disabled appearance on hover */
 }
 
 .createAccountBlock {
-  display: flex;
-  width: 442;
+  display: flex; /* Enable flexbox for layout */
   background-color: #f9f9f9;
   height: 60px;
   margin: 4px;
-  border-radius: 5px;
+  border-radius: 5px; /* Round the corners */
 }
 
 .createAccount {
-  text-align: center;
-  margin: auto auto;
+  text-align: center; /* Center text horizontally */
+  margin: auto; /* Center vertically and horizontally within the block */
   font-size: 0.9rem;
 }
 
 .createAccount a {
   color: #2260CE;
-  text-decoration: none;
+  text-decoration: none; /* Remove the default underline */
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 880px) {
-  .formContainer {
-    width: 385px;
+  .signupContainer {
+    width: 100%; /* Take full width on smaller screens */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
   }
 
-  .title {
+  .leftSection {
+    display: none; /* Hide the left section on smaller screens */
+  }
+
+  .rightSection {
+    display: block; /* Make the right section a block-level element */
+    padding-top: 20px; /* Add top padding */
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .formContainer {
+    width: 385px; /* Set a fixed width for the form container on smaller screens */
+  }
+
+  .formTitle {
     font-size: 1.6rem;
-    padding-bottom: 10px;
-    padding: 0 10px;
+    padding: 0 10px; /* Adjust horizontal padding */
+    margin-bottom: 10px; /* Adjust bottom margin */
   }
 
   .form {
-    padding: 0 10px;
+    padding: 0 10px; /* Adjust horizontal padding */
   }
 }
 
 @media (max-width: 400px) {
-  .loginFormContainer {
-    width: 90vw;
+  .formContainer {
+    width: 90vw; /* Make the form container wider relative to the viewport */
   }
 
-  .title {
-    font: size 1.4em;
+  .formTitle {
+    font-size: 1.4em;
   }
 }

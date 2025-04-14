@@ -25,3 +25,9 @@
   color: #2260CE;
   cursor: pointer;
 }
+
+@media (max-width: 400px) {
+  .footer {
+    padding-left: 3vh;
+  }
+}

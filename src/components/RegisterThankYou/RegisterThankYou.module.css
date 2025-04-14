@@ -87,6 +87,8 @@ p {
 @media (max-width: 576px) {
   .title {
     font-size: 2em;
+    line-height: 1.2em;
+    text-align: center;
   }
 
   .formContainer {

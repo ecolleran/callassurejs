@@ -1,89 +1,90 @@
-/* LoginPage.module.css */
+/* Login.module.css */
 
 .loginSection {
-  padding-top: 20px;
+  padding-top: 20px; /* Add top padding to the section */
+  display: flex; /* Enable flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
 .loginFormContainer {
-  margin: 10px auto 70px;
   background-color: white;
   padding-top: 5px;
   padding-bottom: 1px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  width: 45vw;
-  max-width: 530px;
+  border-radius: 10px; /* Round the corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  width: 45vw; /* Set width relative to viewport width */
+  max-width: 530px; /* Set a maximum width */
 }
 
 .title {
   font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  padding: 0px 40px;
+  font-weight: bold; /* Make the text bold */
+  margin-bottom: 15px; /* Add spacing below the title */
+  padding: 0 40px; /* Add horizontal padding */
   color: #222;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  padding: 0px 40px;
+  display: flex; /* Enable flexbox for form elements */
+  flex-direction: column; /* Stack form elements vertically */
+  padding: 0 40px; /* Add horizontal padding to the form */
 }
 
 .inputGroup {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Add spacing below each input group */
 }
 
 .label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #222;
+  font-weight: bold; /* Make the label text bold */
+  margin-bottom: 0px;
+  color: #333;
 }
 
 .input {
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 5px; /* Round the corners */
   font-size: 1rem;
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .passwordRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Enable flexbox for layout */
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Center items vertically */
 }
 
 .forgotPassword {
   color: #2260CE;
-  text-decoration: none;
+  text-decoration: none; /* Remove the default underline */
   font-size: 0.9rem;
-  transition: color 0.3s ease;
-
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .forgotPassword:hover {
-  color:#222;
+  color: #222; /* Change color on hover */
 }
 
 .rememberMe {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  display: flex; /* Enable flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px; /* Add spacing below the remember me section */
 }
 
 .checkbox {
-  margin-right: 5px;
-  color:#2260CE;
+  margin-right: 5px; /* Add spacing to the right of the checkbox */
+  color: #2260CE;
 }
 
 .checkbox:hover {
-  cursor: pointer;
+  cursor: pointer; /* Indicate that the element is interactive */
 }
 
 .rememberMeLabel {
-  height: 15px;
-  color: #222;
+  height: 15px; /* Set a fixed height */
+  color: #333;
   font-size: 0.8rem;
 }
 
@@ -91,61 +92,61 @@
   background-color: #2260CE;
   color: white;
   padding: 15px 20px;
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Add spacing below the button */
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; /* Round the corners */
   font-size: 1rem;
-  cursor: pointer;
+  cursor: pointer; /* Indicate that the element is interactive */
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .signInButton:hover {
-  background-color: #222;
+  background-color: #222; /* Darken the background on hover */
 }
 
 .createAccountBlock {
-  display: flex;
+  display: flex; /* Enable flexbox for layout */
   background-color: #f9f9f9;
   height: 60px;
   margin: 4px;
-  border-radius: 5px;
+  border-radius: 5px; /* Round the corners */
 }
 
 .createAccount {
-  text-align: center;
-  margin: auto;
+  text-align: center; /* Center text horizontally */
+  margin: auto; /* Center vertically and horizontally within the block */
   font-size: 0.9rem;
 }
 
 .createAccount a {
   color: #2260CE;
-  text-decoration: none;
+  text-decoration: none; /* Remove the default underline */
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 880px) {
   .loginFormContainer {
-    width: 385px;
+    width: 385px; /* Set a fixed width for the form container on smaller screens */
   }
 
   .title {
     font-size: 1.6rem;
-    padding-bottom: 10px;
-    padding: 0 10px;
+    padding-bottom: 10px; /* Add bottom padding */
+    padding: 0 10px; /* Adjust horizontal padding */
   }
 
   .form {
-    padding: 0 10px;
+    padding: 0 10px; /* Adjust horizontal padding */
   }
 }
 
 @media (max-width: 400px) {
   .loginFormContainer {
-    width: 90vw;
+    width: 90vw; /* Make the form container wider relative to the viewport */
   }
 
   .title {
-    font: size 1.4em;
+    font-size: 1.4em;
   }
 }

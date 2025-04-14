@@ -1,39 +1,40 @@
+/* Register.module.css */
+
 .signupContainer {
   display: flex;
   align-items: baseline;
-  height: 100%;
   width: 80vw;
   margin: 0 auto;
-
 }
 
-.leftSection {
+.leftSection,
+.rightSection {
   flex: 1;
-  padding-right: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.leftSection {
+  padding-right: 50px;
+}
+
 .rightSection {
-  flex: 1;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .title {
   font-size: 1.3em;
-  line-height: 1.5em;
+  line-height: 1.5;
   margin-bottom: 20px;
   color: #222;
 }
 
 .description {
   font-size: 1.1em;
-  color: #222;
   line-height: 1.6;
   margin-bottom: 15px;
+  color: #222;
 }
 
 .textContentBold {
@@ -53,17 +54,17 @@
 
 .formTitle {
   font-size: 1.8rem;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-weight: bold;
   margin-bottom: 15px;
-  padding: 0px 40px;
+  padding: 0 40px;
   color: #222;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  padding: 0px 40px;
+  padding: 0 40px;
 }
 
 .formGroup {
@@ -104,12 +105,12 @@ label {
 }
 
 .submitButtonDisabled {
-  background-color: #BBCBED; /* Lighter background color */
+  background-color: #BBCBED;
   cursor: auto;
 }
 
 .submitButtonDisabled:hover {
-  background-color: #BBCBED; /* Maintain the disabled look on hover */
+  background-color: #BBCBED;
 }
 
 .createAccountBlock {
@@ -134,7 +135,9 @@ label {
 /* Media queries for responsiveness */
 @media (max-width: 880px) {
   .signupContainer {
-    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .leftSection {
@@ -142,9 +145,9 @@ label {
   }
 
   .rightSection {
-    margin: 0 auto;
     display: block;
     padding-top: 20px;
+    margin: 0 auto;
   }
 
   .formContainer {
@@ -153,8 +156,8 @@ label {
 
   .formTitle {
     font-size: 1.6rem;
-    padding-bottom: 10px;
     padding: 0 10px;
+    margin-bottom: 10px;
   }
 
   .form {
@@ -168,6 +171,6 @@ label {
   }
 
   .formTitle {
-    font: size 1.4em;
+    font-size: 1.4em;
   }
 }
