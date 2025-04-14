@@ -133,6 +133,10 @@ label {
 
 /* Media queries for responsiveness */
 @media (max-width: 880px) {
+  .signupContainer {
+    display: block;
+  }
+
   .leftSection {
     display: none;
   }
