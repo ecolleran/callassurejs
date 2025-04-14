@@ -1,20 +1,3 @@
-// import { Link } from 'react-router-dom';
-// import styles from './MenuHeader.module.css'; // Import the CSS Module
-
-// function MenuHeader() {
-//   return (
-//     <header className={styles.header}>
-//       <div className={styles.navContainer}>
-//         <Link to="/" className={styles.logoLink}>
-//           <img src="/logo.png" alt="CallAssure Logo" className={styles.logo} />
-//         </Link>
-//         <img src="/x-button.png" alt="exit button" className={styles.exitButton} />
-//       </div>
-//     </header>
-//   );
-// }
-
-// export default MenuHeader;
 import { Link } from 'react-router-dom';
 import styles from './MenuHeader.module.css'; // Import the CSS Module
 

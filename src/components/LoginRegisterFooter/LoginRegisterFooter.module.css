@@ -26,6 +26,18 @@
   cursor: pointer;
 }
 
+@media (max-width: 880px) {
+  .footerLink,
+  .footerCopyright {
+    color:#f9f9f9;
+  }
+
+  .footerLink:hover,
+  .footerCopyright:hover {
+    color: #B8CCEF;
+  }
+}
+
 @media (max-width: 400px) {
   .footer {
     padding-left: 3vh;

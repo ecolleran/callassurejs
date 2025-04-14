@@ -1,5 +1,5 @@
 // App.tsx
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import HomePage from './pages/HomePage.tsx';
 import Header from './components/Headers/PlainHeader/Header.tsx';
@@ -15,25 +15,35 @@ import MenuPage from "./pages/MenuPage/MenuPage.tsx";
 import './App.css';
 
 function App() {
-
   const location = useLocation();
   const pathname = location.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const previousLocation = useRef<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const openMenu = () => {
+    previousLocation.current = pathname;
     setIsMenuOpen(true);
     navigate('/MenuPage');
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
-    navigate(location.pathname === '/MenuPage' ? '/' : location.pathname); // Go back to the previous page
+    const targetPath = previousLocation.current || '/';
+    previousLocation.current = null; // Reset after navigating
+    navigate(targetPath);
   };
+
+  useEffect(() => {
+    // If we navigate away from /MenuPage, close the menu state
+    if (pathname !== '/MenuPage') {
+      setIsMenuOpen(false);
+    }
+  }, [pathname]);
 
   let headerComponent = <></>;
 
@@ -52,7 +62,6 @@ function App() {
       {headerComponent}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/HomePage" element={<HomePage />} /> */}
         <Route path="/HowItWorksPage" element={<HowItWorksPage />} />
         <Route path="/StoryPage" element={<StoryPage />} />
         <Route path="/ContactPage" element={<ContactPage />} />

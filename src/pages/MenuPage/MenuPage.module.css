@@ -1,61 +1,10 @@
+/* MenuPage.module.css */
 .menuPage {
-  position: fixed; /* Covers the entire viewport */
+  position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 100%; /* Adjust width as needed */
   height: 100%;
   background-color: white; /* Or your desired menu background */
-  z-index: 1001; /* Higher than other content */
-  transform: translateX(-100%); /* Initially hidden off-screen to the left */
-  transition: transform 0.3s ease-in-out; /* Smooth slide animation */
-}
-
-.menuPage.open {
-  transform: translateX(0); /* Slide into view */
-}
-
-/* Style the MenuHeader within the MenuPage */
-.menuPage .header {
-  background-color: #f0f0f0; /* Example */
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menuPage .navContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; /* Make sure it spans the header */
-}
-
-.menuPage .logoLink {
-  height: 65px;
-}
-
-.menuPage .logo {
-  /* Style the logo inside the menu page */
-  height: 30px; /* Example */
-}
-
-.menuPage .exitButton {
-  cursor: pointer;
-  height: 30px;
-  background: none;
-  border: none;
-  font-size: 1.5em; /* Adjust as needed */
-  color: #555;
-}
-
-.menuPage .exitButton:hover {
-  color: #333;
-}
-
-.menuPage .menuContent {
-  padding: 20px;
-  /* Style the menu content to take up the full screen or a portion of it */
-  /* You might want to add flexbox or grid here to layout the content */
-  height: calc(100% - 60px); /* Example: Take full height minus header height */
-  overflow-y: auto; /* Allow scrolling if content overflows */
+  z-index: 1001;
 }

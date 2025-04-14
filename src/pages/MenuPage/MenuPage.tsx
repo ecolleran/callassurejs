@@ -1,54 +1,37 @@
-// import MenuHeader from '../../components/Headers/MenuHeader/MenuHeader';
-// import MenuContent from '../../components/MenuContent/MenuContent';
-// import styles from './MenuPage.module.css';
-// import { Helmet } from "react-helmet";
-
-// function MenuPage() {
-//   return (
-//     <div className={styles.menuPage}>
-//       <Helmet>
-//         <title>CallAssure | Assuring Peace of Mind and Independence</title>
-//       </Helmet>
-//       <MenuHeader />
-//       <MenuContent />
-//     </div>
-//   );
-// }
-
 import MenuHeader from '../../components/Headers/MenuHeader/MenuHeader';
 import MenuContent from '../../components/MenuContent/MenuContent';
 import styles from './MenuPage.module.css';
 import { Helmet } from "react-helmet";
-import { useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion'; // Import Framer Motion
 
 interface MenuPageProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-function MenuPage({ isOpen, onClose }: MenuPageProps) {
-  // const navigate = useNavigate();
+const menuVariants = {
+  open: { x: 0 },
+  closed: { x: "100%" }, // Slides out to the left
+};
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto'; // Cleanup on unmount
-    };
-  }, [isOpen]);
+function MenuPage({ isOpen, onClose }: MenuPageProps) {
+  console.log("isOpen in MenuPage:", isOpen); // Add this for debugging
+
 
   return (
-    <div className={`${styles.menuPage} ${isOpen ? styles.open : ''}`}>
+    <motion.div
+      className={styles.menuPage}
+      initial="closed"
+      animate={isOpen ? "open" : "closed"}
+      variants={menuVariants}
+      transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+    >
       <Helmet>
-        <title>CallAssure | Assuring Peace of Mind and Independence</title>
-      </Helmet>
-      <MenuHeader onCloseMenu={onClose} /> {/* Only pass onClose as onCloseMenu */}
-      <MenuContent />
-    </div>
+         <title>CallAssure | Assuring Peace of Mind and Independence</title>
+       </Helmet>
+       <MenuHeader onCloseMenu={onClose} /> {/* Only pass onClose as onCloseMenu */}
+       <MenuContent />
+    </motion.div>
   );
 }
 
