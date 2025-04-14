@@ -82,6 +82,7 @@
 }
 
 .rememberMeLabel {
+  height: 15px;
   color: #222;
   font-size: 0.8rem;
 }
@@ -145,6 +146,6 @@
   }
 
   .title {
-    text-align: center;
+    font: size 1.4em;
   }
 }

@@ -58,7 +58,7 @@ p {
 /* Media queries for responsiveness */
 @media (max-width: 880px) {
   .thankYouContainer {
-    width: 95vw; /* Adjust width for smaller screens */
+    width: 90vw; /* Adjust width for smaller screens */
     margin-top: 20px; /* Adjust top margin on smaller screens */
     padding: 10px; /* Adjust padding on smaller screens */
   }
