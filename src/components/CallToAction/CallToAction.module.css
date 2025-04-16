@@ -61,12 +61,10 @@
   border: 1px solid #2260CE; /* Blue border */
 }
 
-.registerButton:hover {
-  background-color: #6F98DF;
-}
-
+.registerButton:hover,
 .contactButton:hover {
-  background-color: #B2C1EE;
+  background-color: #222222; /* Darker blue on hover */
+  color: white;
 }
 
 /* Media queries for responsiveness */
