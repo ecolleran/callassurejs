@@ -1,6 +1,6 @@
 // pages/ContactPage/ContactPage.tsx
 import ContactForm from '../components/ContactSection/ContactSection';
-import Footer from '../components/Footer/Footer';
+import Footer from '../components/Footers/Footer/Footer';
 import { Helmet } from 'react-helmet';
 import { motion as m } from 'framer-motion';
 

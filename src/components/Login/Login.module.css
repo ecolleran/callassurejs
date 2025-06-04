@@ -46,6 +46,7 @@
 .input {
   padding: 12px;
   border: 1px solid #ccc;
+  background-color: white;
   border-radius: 5px; /* Round the corners */
   font-size: 1rem;
   width: 100%;
@@ -78,6 +79,10 @@
 .checkbox {
   margin-right: 5px; /* Add spacing to the right of the checkbox */
   color: #2260CE;
+}
+
+input[type=checkbox]:before {
+  background-color: white;
 }
 
 .checkbox:hover {
@@ -119,6 +124,8 @@
   text-align: center; /* Center text horizontally */
   margin: auto; /* Center vertically and horizontally within the block */
   font-size: 0.9rem;
+  font-weight: 500;
+  color:#333;
 }
 
 .createAccount a {

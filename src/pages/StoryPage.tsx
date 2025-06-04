@@ -1,5 +1,5 @@
 import StorySection from '../components/StorySection/StorySection';
-import Footer from '../components/Footer/Footer';
+import Footer from '../components/Footers/Footer/Footer';
 import { Helmet } from 'react-helmet';
 import { motion as m } from 'framer-motion';
 

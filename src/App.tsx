@@ -12,6 +12,7 @@ import RegisterPage from './pages/RegisterPage/RegisterPage.tsx';
 import SetCheckInPage from "./pages/SetCheckInPage/SetCheckInPage.tsx";
 import RegisterThankYouPage from "./pages/RegisterThankYouPage/RegisterThankYouPage.tsx";
 import MenuPage from "./pages/MenuPage/MenuPage.tsx";
+import DashboardMainPage from "./pages/DashboardMainPage/DashboardMainPage.tsx";
 import './App.css';
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
         <Route path="/SetCheckInPage" element={<SetCheckInPage />} />
         <Route path="/RegisterThankYouPage" element={<RegisterThankYouPage />} />
         <Route path="/MenuPage" element={<MenuPage isOpen={isMenuOpen} onClose={closeMenu} />} />
+        <Route path="/dashboard" element={<DashboardMainPage />} />
       </Routes>
     </>
   );

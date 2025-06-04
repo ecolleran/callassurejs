@@ -21,7 +21,7 @@ function Landing() {
         <div className={styles.textContainer}>
           <h2 className={styles.landingTitle}>Assuring peace of mind and independence.</h2>
           <p className={styles.landingText}>
-            Join the families ensuring loved ones' well-being with CallAssure's automated check-in calls and instant family alerts for missed responses, building a stronger sense of connection and proactive safety.
+            Help protect your loved ones with CallAssure’s automated check-ins and instant family alerts, fostering connection and proactive care.
           </p>
           <form className={styles.emailInput} onSubmit={handleSubmit}>
             <input

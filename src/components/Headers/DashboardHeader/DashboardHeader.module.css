@@ -1,0 +1,43 @@
+/* Header.module.css */
+
+.header {
+  padding: 15px 0;
+  width: 100vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 0px;
+  width: 80vw;
+}
+
+.logoLink {
+  transition: opacity 300ms ease;
+}
+
+.logoLink:hover {
+  opacity: 0.6;
+}
+
+.logo {
+  height: 75px;
+  width: 85px;
+  margin-right: 20px;
+}
+
+.profileButton {
+  background-color: #2260CE;
+  color: white;
+  padding: 0px 25px;
+  height: 40px;
+  border-radius: 100px;
+  border: none;
+}
+
+.profileButton:hover {
+  background-color: #222222;
+}

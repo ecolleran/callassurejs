@@ -1,6 +1,6 @@
 import LoginSigninHeader from "../../components/Headers/LoginRegisterHeader/LoginSigninHeader";
 import Register from "../../components/Register/Register"
-import LoginRegisterFooter from "../../components/LoginRegisterFooter/LoginRegisterFooter";
+import LoginRegisterFooter from "../../components/Footers/LoginRegisterFooter/LoginRegisterFooter";
 import styles from './RegisterPage.module.css';
 import { Helmet } from "react-helmet";
 

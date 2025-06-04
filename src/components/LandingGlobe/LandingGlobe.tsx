@@ -8,13 +8,13 @@ function LandingGlobe() {
             <div className={styles.textContainer}>
               <div className={styles.textBlock}>
                 <h3 className={styles.label}>For Loved Ones</h3>
-                <p className={styles.text}>Maintain your independence at home, knowing your family is connected and at ease</p>
+                <p className={styles.text}>Stay independent at home, with your family connected and at ease</p>
               </div>
             </div>
             <div className={styles.textContainer}>
               <div className={styles.textBlock}>
                 <h3 className={styles.label}>For Families</h3>
-                <p className={styles.text}>Support your loved one's happiness and health, knowing they're safe and secure</p>
+                <p className={styles.text}>Support your loved one's well-being, knowing they're safe and secure</p>
               </div>
             </div>
           </div>

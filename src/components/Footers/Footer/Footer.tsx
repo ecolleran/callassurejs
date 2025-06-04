@@ -1,6 +1,6 @@
 // Footer.tsx
-import SocialIcons from '../SocialIcons/SocialIcons'; // Assuming SocialIcons is in a separate file
-import styles from './Footer.module.css'; // Import the CSS Module
+import SocialIcons from '../SocialIcons/SocialIcons';
+import styles from './Footer.module.css';
 
 function Footer() {
   return (
@@ -14,7 +14,9 @@ function Footer() {
         <a href="/privacy" className={styles.footerLink}>Privacy Policy</a>
       </nav>
       <SocialIcons />
-      <p className={styles.footerCopyright}>&copy; 2024 CallAssure. All rights reserved.</p>
+      <p className={styles.footerCopyright}>
+        &copy; {new Date().getFullYear()} CallAssure. All rights reserved.
+      </p>
     </footer>
   );
 }

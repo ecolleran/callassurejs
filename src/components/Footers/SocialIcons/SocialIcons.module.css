@@ -1,0 +1,36 @@
+.socialIconsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* Shared icon styling */
+.socialIconImg,
+.socialCallAssure {
+  height: 36px;
+  width: 36px;
+  transition: opacity 300ms ease;
+  object-fit: contain;
+}
+
+.socialCallAssure {
+  width: 42px; /* Slightly wider if it's a logo */
+}
+
+.socialIconLink:hover,
+.socialCallAssure:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* Larger screens: align left if needed */
+@media (min-width: 768px) {
+  .socialIconsContainer {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

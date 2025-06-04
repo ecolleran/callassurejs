@@ -1,6 +1,6 @@
 import LoginSigninHeader from "../../components/Headers/LoginRegisterHeader/LoginSigninHeader";
 import SetCheckIn from "../../components/SetCheckIn/SetCheckIn";
-import LoginRegisterFooter from "../../components/LoginRegisterFooter/LoginRegisterFooter";
+import LoginRegisterFooter from "../../components/Footers/LoginRegisterFooter/LoginRegisterFooter";
 import styles from './SetCheckInPage.module.css';
 import { Helmet } from "react-helmet";
 

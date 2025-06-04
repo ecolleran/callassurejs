@@ -2,7 +2,7 @@ import HeroSection from '../components/HeroSection/HeroSection';
 import StepsSection from '../components/StepsSection/StepsSection';
 import FeaturesSection from '../components/FeaturesSection/FeaturesSection';
 import CallToAction from '../components/CallToAction/CallToAction';
-import Footer from '../components/Footer/Footer';
+import Footer from '../components/Footers/Footer/Footer';
 import { Helmet } from 'react-helmet';
 import { motion as m } from 'framer-motion';
 
