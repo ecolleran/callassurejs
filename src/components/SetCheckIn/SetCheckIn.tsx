@@ -5,15 +5,15 @@ import styles from './SetCheckIn.module.css';
 const SetCheckIn: React.FC = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const emailFromUrl = searchParams.get('email') || '';
-  const fullNameFromUrl = searchParams.get('fullName') || '';
-  const passwordFromUrl = searchParams.get('password') || '';
+  const emailFromUrl = (searchParams.get('email') || '').trim();
+  const fullNameFromUrl = (searchParams.get('fullName') || '').trim();
+  const passwordFromUrl = (searchParams.get('password') || '').trim();
   const accountTypeFromUrl = searchParams.get('accountType')|| '';
 
   const [textOrCall, setTextOrCall] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [checkInTime, setCheckInTime] = useState('');
-  const [checkInTimeAMPM, setCheckInTimeAMPM] = useState('');
+  const [checkInTimeAMPM, setCheckInTimeAMPM] = useState('AM');
   // const navigate = useNavigate();
 
   const handleTextOrCallChange = (event: ChangeEvent<HTMLSelectElement>) => {

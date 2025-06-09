@@ -68,11 +68,11 @@ function Login() {
               />
               <label htmlFor="rememberMe" className={styles.rememberMeLabel}>Remember me on this device</label>
             </div>
-            <Link to="/dashboard">
+            {/* <Link to="/dashboard"> */}
               <button type="submit" className={styles.signInButton}>
                 Sign In
               </button>
-            </Link>
+            {/* </Link> */}
           </form>
           <div className={styles.createAccountBlock}>
             <div className={styles.createAccount}>

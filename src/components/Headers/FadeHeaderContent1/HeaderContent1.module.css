@@ -21,7 +21,7 @@
 }
 
 .navLink:hover {
-  color: #222;
+  color: #C3D4F2;
 }
 
 .buttonContainer {
@@ -55,10 +55,10 @@
 }
 
 .loginButton:hover {
-  color: #222222;
+  color: #C3D4F2;
 }
 
 .registerButton:hover {
-  color: white;
-  background-color: #222222;
+  /* color: white; */
+  background-color: #C3D4F2;
 }
